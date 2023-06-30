@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+</head>
+
+
+<form class ="input">
+    <!-- <input claas ="input1" type ="text" placeholder="enter your  first  number" />
+    <input  class ="input2" type="text" placeholder="enter your  second number" /> -->
+    <input type="text" class="checking">
+    <input type="text" class="checkingT">
+    <select>
+        <option value="">option</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        
+    </select>
+    <p>Result</p>
+</form>
+<script>
+     
+    let alllist =document.querySelector("select");
+    let check = document.querySelector(".checking");
+    let checkTwo = document.querySelector(".checkingT")
+    let para = document.querySelector("p")
+    
+   alllist.addEventListener("change", () => {
+
+    if (alllist.value === "+") {
+        para.innerHTML = Number(check.value) + Number(checkTwo.value)
+     console.log(Number(check.value) + Number(checkTwo.value))
+    } 
+    else if (alllist.value === "-") {
+        para.innerHTML = Number(check.value) - Number(checkTwo.value)
+     console.log(Number(check.value) - Number(checkTwo.value))
+    } 
+    else if (alllist.value === "*") {
+        para.innerHTML = Number(check.value) * Number(checkTwo.value)
+     console.log(Number(check.value) * Number(checkTwo.value))
+    } 
+    else if (alllist.value === "/") {
+        para.innerHTML = Number(check.value) / Number(checkTwo.value)
+     console.log(Number(check.value) / Number(checkTwo.value))
+    }  else {
+        console.log("nothing is ther")
+    }
+
+   })
+
+   
+    
+
+
+       
+</script>
+</body>
+</html>
